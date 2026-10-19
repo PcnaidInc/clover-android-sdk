@@ -23,6 +23,15 @@ $ gradle clean installDebug
 
 Alternatively, you may import both the SDK and examples as an Android Studio project.
 
+CI
+==
+
+The `CI` workflow (`.github/workflows/ci.yml`) runs on every pull request and on
+pushes to `master`. It sets up JDK 17 and the Android SDK, then runs the
+repository's Gradle tasks: `lintDebug` (Android lint), `testDebugUnitTest`
+(unit tests) and `assembleDebug` (debug build). Superseded runs for the same
+branch are cancelled automatically.
+
 Java Documentation
 =======================
 
